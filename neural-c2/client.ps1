@@ -173,9 +173,6 @@ Write-Host "============================================"
 Write-Host "  neural-C2 GitHub Agent"
 Write-Host "  Agent ID   : $AgentId"
 Write-Host "  Host       : $Username@$Hostname"
-Write-Host "  Private IP : $PrivateIP"
-Write-Host "  Public IP  : $PublicIP"
-Write-Host "  Repo       : $GitHubRepo"
 Write-Host "============================================"
 
 Ensure-Labels

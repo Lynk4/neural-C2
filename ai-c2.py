@@ -259,5 +259,4 @@ def cleanup_dead_agents(minutes: int = 30) -> dict:
 
 if __name__ == "__main__":
     print("🚀 Starting ai-c2 MCP server (GitHub C2 mode)")
-    print(f"   Repo: {GITHUB_REPO}")
     mcp.run()
