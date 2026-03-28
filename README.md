@@ -5,6 +5,11 @@
 
 ---
 
+https://github.com/user-attachments/assets/e99ec34e-ff5e-44a4-86b2-c14fe9ffcb88
+
+
+---
+
 ## 🏗️ How it Works
 
 The system uses a unique "dead-drop" mechanism where no direct socket connection exists between the controller and the agent.
