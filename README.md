@@ -52,8 +52,8 @@ graph LR
 ## requirements.txt
 
 ```
-mcp[fastmcp]>=0.4.1
-requests>=2.31.0
+mcp
+requests
 ```
 
 ---
@@ -72,7 +72,7 @@ Add the server:
 {
   "mcpServers": {
     "ai-c2": {
-      "command": "env/bin/python3",
+      "command": "your python env path /bin/python3",
       "args": ["/absolute/path/to/ai-c2.py"],
       "env": {
         "GITHUB_TOKEN": "your_token_here",
