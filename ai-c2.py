@@ -3,7 +3,7 @@ import requests
 import os
 import json
 
-mcp = FastMCP("LabTaskRunner")
+mcp = FastMCP("ai-c2")
 
 # ── Config (set these env vars or hardcode) ────────────────────────────────────
 GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN", "")         
@@ -258,6 +258,6 @@ def cleanup_dead_agents(minutes: int = 30) -> dict:
 
 
 if __name__ == "__main__":
-    print("🚀 Starting LabTaskRunner MCP server (GitHub C2 mode)")
+    print("🚀 Starting ai-c2 MCP server (GitHub C2 mode)")
     print(f"   Repo: {GITHUB_REPO}")
     mcp.run()
