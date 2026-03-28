@@ -18,7 +18,7 @@ graph LR
     Agent -- "Post Comment" --> GitHub
     GitHub -- "Read Comment" --> MCP
     MCP -- "Format Result" --> Claude
-    Claude -- "Natural Language" --> User
+    AI -- "Natural Language" --> User
 ```
 
 ---
@@ -51,6 +51,8 @@ graph LR
 
 ## requirements.txt
 
+Create python environment.
+
 ```
 mcp
 requests
@@ -72,7 +74,7 @@ Add the server:
 {
   "mcpServers": {
     "ai-c2": {
-      "command": "your python env path /bin/python3",
+      "command": "your python virtual environment path /bin/python",
       "args": ["/absolute/path/to/ai-c2.py"],
       "env": {
         "GITHUB_TOKEN": "your_token_here",
