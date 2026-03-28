@@ -87,6 +87,11 @@ Add the server:
 ### 3. Agent Deployment
 1.  Copy `client.ps1` to the target machine.
 2.  Configure your **Token** and **Repo** at the top of the file.
+```
+# ── CONFIGURE THESE ───────────────────────────────────────────────────────────
+$GitHubToken = "<github-token>"                                  # Your token
+$GitHubRepo  = "githubusername/reponame"                         # Your GitHub repo
+```
 3.  Run the agent:
 
 ---
