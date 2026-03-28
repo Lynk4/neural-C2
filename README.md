@@ -1,3 +1,33 @@
+<div align="center">
+  
+  <img src="https://img.shields.io/badge/PowerShell-5391FE?style=for-the-badge&logo=powershell&logoColor=white" />
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" />
+  <img src="https://img.shields.io/badge/MCP-FF6B35?style=for-the-badge&logo=claude&logoColor=white" />
+
+  <br/>
+
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=32&duration=3000&pause=500&color=00FF9D&center=true&vCenter=true&width=700&height=100&lines=neural-C2;C2+over+GitHub+Issues;Dead-Drop+Communication;AI+Powered+Command+Execution;No+Sockets.+No+Infrastructure." />
+
+  <p>
+    <strong>⚡ Control Machines Like You Chat</strong><br/>
+
+  </p>
+
+  <p>
+    🛰️ Blend into normal GitHub traffic<br/>
+    💬 Turn thoughts into commands<br/>
+    ⚙️ Execute anywhere, observe instantly
+  </p>
+
+  <p>
+    <strong>“No ports. No listeners. Just Issues.”</strong>
+  </p>
+</div>
+
+
+---
+
 # neural-C2
 ---
 
@@ -16,14 +46,22 @@ The system uses a unique "dead-drop" mechanism where no direct socket connection
 
 ```mermaid
 graph LR
-    User((User)) -- "NLP Command" --> Claude[Claude Desktop]
-    AI-interface -- "MCP Server" --> MCP[ai-c2.py]
-    MCP -- "Create Issue" --> GitHub{GitHub API}
-    GitHub -- "Poll Issues" --> Agent[Remote Agent]
-    Agent -- "Post Comment" --> GitHub
-    GitHub -- "Read Comment" --> MCP
-    MCP -- "Format Result" --> Claude
-    AI -- "Natural Language" --> User
+    User((USER)) ==>|NLP COMMAND| AI[AI CHAT]
+    AI ==>|MCP PROTOCOL| MCP[CONTROLLER]
+    MCP ==>|CREATE ISSUE| GH[(GITHUB)]
+    GH ==>|POLL| Agent[AGENT]
+    Agent ==>|COMMENT| GH
+    GH ==>|READ| MCP
+    MCP ==>|RESPONSE| AI
+    AI ==>|RESULT| User
+    
+    style User fill:#ff0066,stroke:#ff00cc,stroke-width:4px,color:#fff,font-weight:bold,rx:50,ry:50
+    style AI fill:#00ff9d,stroke:#00ff66,stroke-width:4px,color:#000,font-weight:bold,rx:20,ry:20
+    style MCP fill:#ffb347,stroke:#ff6600,stroke-width:4px,color:#000,font-weight:bold,rx:20,ry:20
+    style GH fill:#bf4dff,stroke:#9b00ff,stroke-width:4px,color:#fff,font-weight:bold,rx:25,ry:25
+    style Agent fill:#00ccff,stroke:#0099ff,stroke-width:4px,color:#000,font-weight:bold,rx:20,ry:20
+    
+    linkStyle default stroke:#ff00ff,stroke-width:3px,fill:none
 ```
 
 ---
@@ -100,6 +138,11 @@ $GitHubToken = "<github-token>"                                  # Your token
 $GitHubRepo  = "githubusername/reponame"                         # Your GitHub repo
 ```
 3.  Run the agent:
+
+```
+.\client.ps1
+```
+
 
 ---
 
